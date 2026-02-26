@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { selectCartTotalQuantity } from '../redux/cartSlice';
+import { FaShoppingCart } from 'react-icons/fa';
 import './Header.css';
 
-function Header(){
+const Header = () => {
   const cartQuantity = useSelector(selectCartTotalQuantity);
 
   return (
@@ -15,6 +17,10 @@ function Header(){
         
         <nav className="nav-menu">
           <Link to="/" className="nav-link">Home</Link>
+          <Link to="/cart" className="nav-link cart-link">
+            <FaShoppingCart className="cart-icon" />
+            <span className="cart-badge">{cartQuantity}</span>
+          </Link>
         </nav>
       </div>
     </header>
