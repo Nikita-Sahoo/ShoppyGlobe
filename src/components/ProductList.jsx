@@ -1,12 +1,8 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectProducts, selectLoading, selectError, setSearchQuery } from '../redux/productSlice';
 import useFetchProducts from '../hooks/useFetchProducts';
-import ProductItem from './ProductItem';
 import './ProductList.css';
-
-// Lazy load ProductDetail
-const ProductDetail = lazy(() => import('./ProductDetail'));
 
 const ProductList = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -63,11 +59,9 @@ const ProductList = () => {
         </div>
       ) : (
         <div className="products-grid">
-          {products.map(product => (
-            <ProductItem key={product.id} product={product} />
-          ))}
+          <h1>All Products</h1>
         </div>
-      )}
+      )} 
     </div>
   );
 };

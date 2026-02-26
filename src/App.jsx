@@ -5,6 +5,9 @@ import { store } from './redux/Store';
 import Header from './components/Header';
 import './App.css';
 
+const ProductList = lazy(() => import('./components/ProductList'));
+
+
 // Loading component for Suspense
 const LoadingFallback = () => (
   <div className="loading-fallback">
@@ -22,7 +25,7 @@ function App() {
           <main className="main-content">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
-                
+                 <Route path="/" element={<ProductList />} />
               </Routes>
             </Suspense>
           </main>
