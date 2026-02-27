@@ -5,6 +5,7 @@ import { store } from './redux/store';
 import Header from './components/Header';
 import './App.css';
 
+
 // Lazy load components for code splitting
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
