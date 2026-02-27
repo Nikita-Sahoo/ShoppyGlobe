@@ -7,6 +7,8 @@ import './App.css';
 
 
 // Lazy load components for code splitting
+const Dashboard = lazy(() => import('./components/Dashboard'));
+
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
 const Cart = lazy(() => import('./components/Cart'));
@@ -30,7 +32,8 @@ function App() {
           <main className="main-content">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
-                <Route path="/" element={<ProductList />} />
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/products" element={<ProductList />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />

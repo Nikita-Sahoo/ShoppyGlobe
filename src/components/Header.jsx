@@ -17,6 +17,7 @@ function Header (){
         
         <nav className="nav-menu">
           <Link to="/" className="nav-link">Home</Link>
+          <Link to="/products" className="nav-link">Products</Link>
           <Link to="/cart" className="nav-link cart-link">
             <FaShoppingCart className="cart-icon" />
             <span className="cart-badge">{cartQuantity}</span>
