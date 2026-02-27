@@ -7,6 +7,8 @@ import './App.css';
 
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
+const Cart = lazy(() => import('./components/Cart'));
+
 
 
 // Loading component for Suspense
@@ -28,7 +30,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<ProductList />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
-
+                <Route path="/cart" element={<Cart />} />
               </Routes>
             </Suspense>
           </main>

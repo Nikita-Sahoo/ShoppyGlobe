@@ -8,7 +8,7 @@ import './ProductList.css';
 // Lazy load ProductDetail
 const ProductDetail = lazy(() => import('./ProductDetail'));
 
-const ProductList = () => {
+function ProductList(){
   const [searchInput, setSearchInput] = useState('');
   const products = useSelector(selectProducts);
   const loading = useSelector(selectLoading);
