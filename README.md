@@ -1,16 +1,60 @@
-# React + Vite
+# ShoppyGlobe E-commerce Application:
+A modern, full-featured e-commerce application built with React, Redux, and Vite. This application demonstrates best practices in React development including state management, routing, performance optimization, and responsive design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+- Core Features
+Product Listing - Browse all products with search functionality
 
-Currently, two official plugins are available:
+Product Details - View detailed information about each product
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Shopping Cart - Add/remove items, update quantities
 
-## React Compiler
+Checkout Process - Dummy checkout form with validation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Search Functionality - Real-time product search
 
-## Expanding the ESLint configuration
+Responsive Design - Works seamlessly on all devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Advanced Features
+Lazy Loading - Code splitting and image lazy loading
+
+Error Handling - Graceful error handling for API failures
+
+Loading States - Skeleton loading and spinners
+
+404 Page - Custom not found page
+
+Order Success Flow - Automatic cart clearing and redirect
+
+# Tech Stack
+Technology	   Version	    Purpose
+React	        18.2.0	    Frontend framework
+Redux Toolkit	2.0.0	    State management
+React Router	6.20.0	    Routing and navigation
+Vite	        5.0.0	    Build tool and dev server
+React Icons	    5.0.0	    Icon components
+Prop Types	    15.8.1	    Runtime type checking
+CSS3	-	                Styling and responsive design
+
+
+Step-by-Step Installation
+
+# Clone the repository
+git clone https://github.com/yourusername/shoppyglobe.git
+cd shoppyglobe
+
+# Install dependencies
+npm install
+yarn install
+
+# Install additional dependencies (if not automatically installed)
+npm install react-router-dom redux react-redux @reduxjs/toolkit prop-types react-icons
+
+# Verify installation
+npm list --depth=0
+
+# Running the Application
+npm run dev
+
+
+
