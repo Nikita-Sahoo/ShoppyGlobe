@@ -4,7 +4,7 @@ import { selectProducts, selectLoading, selectError, setSearchQuery } from '../r
 import useFetchProducts from '../hooks/useFetchProducts';
 import './ProductList.css';
 
-const ProductList = () => {
+function ProductList() {
   const [searchInput, setSearchInput] = useState('');
   const products = useSelector(selectProducts);
   const loading = useSelector(selectLoading);

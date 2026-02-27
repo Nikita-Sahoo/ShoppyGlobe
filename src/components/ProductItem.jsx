@@ -37,7 +37,7 @@ const LazyImage = ({ src, alt }) => {
   return <img ref={imgRef} src={imageSrc || '/placeholder.jpg'} alt={alt} className="product-image" />;
 };
 
-const ProductItem = ({ product }) => {
+function ProductItem({ product }){
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {

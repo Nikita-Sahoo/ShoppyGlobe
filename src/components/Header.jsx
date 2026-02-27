@@ -5,7 +5,7 @@ import { selectCartTotalQuantity } from '../redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa';
 import './Header.css';
 
-const Header = () => {
+function Header (){
   const cartQuantity = useSelector(selectCartTotalQuantity);
 
   return (
