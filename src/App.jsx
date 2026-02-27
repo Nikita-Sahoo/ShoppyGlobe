@@ -1,16 +1,16 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './redux/Store';
+import { store } from './redux/store';
 import Header from './components/Header';
 import './App.css';
 
+// Lazy load components for code splitting
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
 const Cart = lazy(() => import('./components/Cart'));
 const Checkout = lazy(() => import('./components/Checkout'));
-
-
+const NotFound = lazy(() => import('./components/NotFound'));
 
 // Loading component for Suspense
 const LoadingFallback = () => (
@@ -33,6 +33,7 @@ function App() {
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </main>

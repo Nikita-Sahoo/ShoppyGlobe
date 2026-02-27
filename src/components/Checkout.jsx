@@ -4,7 +4,7 @@ import { selectCartItems, selectCartTotalAmount, clearCart } from '../redux/cart
 import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
-const Checkout = () => {
+function Checkout() {
   const cartItems = useSelector(selectCartItems);
   const totalAmount = useSelector(selectCartTotalAmount);
   const dispatch = useDispatch();
