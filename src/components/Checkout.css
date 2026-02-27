@@ -63,6 +63,12 @@ input.error {
   border-color: #ff4757;
 }
 
+.error-message {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
 
 .place-order-btn {
   width: 100%;
