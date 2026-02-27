@@ -6,6 +6,7 @@ import Header from './components/Header';
 import './App.css';
 
 const ProductList = lazy(() => import('./components/ProductList'));
+const ProductDetail = lazy(() => import('./components/ProductDetail'));
 
 
 // Loading component for Suspense
@@ -25,7 +26,9 @@ function App() {
           <main className="main-content">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
-                 <Route path="/" element={<ProductList />} />
+                <Route path="/" element={<ProductList />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
+
               </Routes>
             </Suspense>
           </main>
